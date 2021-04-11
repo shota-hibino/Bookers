@@ -30,9 +30,22 @@ body{
   line-height: 18px;
   margin: 33px;
 }
+
 p{
  font-family: verdana, arial, helvetica, sans-serif;
  font-size: 13px;
  line-height: 18px;
  margin: 33px;
+}
+
+th{
+  padding-bottom: 5px;
+}
+
+label{
+  display: block;
+}
+
+div.field, div.actions{
+  margin-bottom: 10px;
 }

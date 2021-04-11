@@ -1,8 +1,8 @@
 class HomesController < ApplicationController
-  def index
+  def show
   end
 
-  def show
+  def index
   end
 
   def new
