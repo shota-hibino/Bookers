@@ -10,20 +10,22 @@
     </tr>
   </thead>
 
+  <% @books.each do |book| %>
     <tbody>
       <tr>
-        <td>ssssssssssssssssssssss</td>
-        <td>ttttttttttttttttttttt</td>
-        <td><%= link_to "Show", "/books" %></td>
-        <td><%= link_to "Edit", "/books" %></td>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to "Show", "/books/#{book.id}" %></td>
+        <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
         <td><%= link_to "Destoy", "/books" %></td>
       </tr>
     </tbody>
+  <% end %>
 </table>
 
 <h2>New Book</h2>
 <!-- form_with部分 -->
-<%= form_with model:@book, local:true do |f| %>
+<%= form_with model:@book, url:'/books', local:true do |f| %>
 　<div class = "field">
     <label for = "book_title">Title</label>
     <%= f.text_field :title %>
